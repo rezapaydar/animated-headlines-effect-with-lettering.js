@@ -1,0 +1,139 @@
+@font-face {
+    font-family: opensans;
+    src: url(font/OpenSans-Light.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: opensans;
+}
+
+body {
+    /* direction: rtl; */
+    height: 100%;
+    background: rgb(29, 29, 29);
+    animation: animate1 forwards 5s 23s;
+}
+
+h2 {
+    text-align: center;
+    letter-spacing: 14px;
+    text-transform: uppercase;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 900;
+    /* outline: 3px solid black; */
+    stroke: black;
+    stroke-width: 3px;
+    text-shadow: 1px 1px 5px 5px black;
+}
+
+.os-phrases h2,
+.os-phrases h2>span {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.os-phrases h2>span {
+    margin: 0 15px;
+}
+
+.os-phrases h2>span>span {
+    display: inline-block;
+    perspective: 1000px;
+    transform-origin: 50% 50%;
+}
+
+.os-phrases h2>span>span>span {
+    display: inline-block;
+    color: hsla(0, 0%, 0%, 0);
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
+    animation: animate 5s linear forwards;
+}
+
+.os-phrases h2:nth-child(2)>span>span>span {
+    animation-delay: 5s;
+}
+
+.os-phrases h2:nth-child(3)>span>span>span {
+    animation-delay: 13s;
+}
+
+.os-phrases h2:nth-child(4)>span>span>span {
+    animation-delay: 20s;
+}
+
+.os-phrases h2:nth-child(5)>span>span>span {
+    animation-delay: 28s;
+    animation-duration: 8s;
+    font-size: 50px;
+}
+
+@keyframes animate {
+    0% {
+        text-shadow: 0 0 1px white;
+        letter-spacing: 80px;
+        opacity: 0.1;
+        transform: rotateY(-90deg);
+    }
+    50% {
+        text-shadow: 0 0 1px white;
+        letter-spacing: 14px;
+        opacity: 0.5;
+        transform: rotateY(0deg);
+    }
+    85% {
+        text-shadow: 0 0 1px white;
+        letter-spacing: 14px;
+        opacity: 1;
+        transform: rotateY(0deg) translateZ(100px);
+    }
+    100% {
+        text-shadow: 0 0 10px white;
+        letter-spacing: 14px;
+        opacity: 0.0;
+        pointer-events: none;
+        transform: rotateY(130deg) translateZ(100px);
+    }
+}
+
+@keyframes animate1{
+    50%{
+        background: 000;
+    }
+     95%{
+        background: 000;
+    } 
+    100%{
+       
+        background: url(img/1.jpg);
+        background-position: center;
+        background-size: 100%;
+        background-position-y: 0px;
+    }
+}
+
+.os-phrases h2:nth-child(5)>span>span>span{
+    font-size: 30px;
+    animation: fadeIn 4s linear 25s forwards;
+
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        text-shadow: 0 0 50px white;
+    }
+    100%{
+        opacity: 1;
+        font-size: 200%;
+        font-weight: 2000;
+        text-shadow: 0 0 1px yellow;
+    }
+}
