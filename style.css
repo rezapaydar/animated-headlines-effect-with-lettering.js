@@ -5,11 +5,10 @@
 
 * {
     box-sizing: border-box;
-    font-family: opensans;
 }
 
 body {
-    /* direction: rtl; */
+    font-family: opensans;
     height: 100%;
     background: rgb(29, 29, 29);
     animation: animate1 forwards 5s 23s;
@@ -23,11 +22,8 @@ h2 {
     position: absolute;
     left: 0;
     top: 0;
-    font-weight: 900;
-    /* outline: 3px solid black; */
-    stroke: black;
-    stroke-width: 3px;
-    text-shadow: 1px 1px 5px 5px black;
+
+    /* font-weight: 900; */
 }
 
 .os-phrases h2,
@@ -41,12 +37,16 @@ h2 {
 
 .os-phrases h2>span {
     margin: 0 15px;
+    /* animation: animate1 5s linear forwards; */
+
 }
 
 .os-phrases h2>span>span {
     display: inline-block;
     perspective: 1000px;
     transform-origin: 50% 50%;
+    /* animation: animate1 5s linear forwards; */
+
 }
 
 .os-phrases h2>span>span>span {
@@ -56,6 +56,7 @@ h2 {
     transform: translate3d(0, 0, 0);
     animation: animate 5s linear forwards;
 }
+
 
 .os-phrases h2:nth-child(2)>span>span>span {
     animation-delay: 5s;
@@ -75,8 +76,28 @@ h2 {
     font-size: 50px;
 }
 
-@keyframes animate {
+.os-phrases h2:nth-child(5)>span>span>span{
+    font-size: 30px;
+    animation: fadeIn 4s linear 25s forwards;
+
+}
+
+
+/* animations */
+@keyframes animate2{
+    0%{
+        color: black;
+    }
+    100%{
+        color: red;
+    }
+}
+
+
+
+@keyframes animate{
     0% {
+        background: white;
         text-shadow: 0 0 1px white;
         letter-spacing: 80px;
         opacity: 0.1;
@@ -84,7 +105,7 @@ h2 {
     }
     50% {
         text-shadow: 0 0 1px white;
-        letter-spacing: 14px;
+        letter-spacing: 40px;
         opacity: 0.5;
         transform: rotateY(0deg);
     }
@@ -119,11 +140,6 @@ h2 {
     }
 }
 
-.os-phrases h2:nth-child(5)>span>span>span{
-    font-size: 30px;
-    animation: fadeIn 4s linear 25s forwards;
-
-}
 
 @keyframes fadeIn{
     0%{
